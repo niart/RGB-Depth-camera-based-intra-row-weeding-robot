@@ -1,0 +1,2 @@
+CMP9767M/uol_cmp9767m_base:CMP9767M/uol_cmp9767m_tutorial:assignment
+-DCATKIN_DEVEL_PREFIX=/home/bonjour/NW_assignment_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bonjour/NW_assignment_ws/install -G Unix Makefiles
