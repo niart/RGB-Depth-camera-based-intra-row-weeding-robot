@@ -19,12 +19,16 @@ to find the coordinates of robot:
 rostopic echo /thorvald_001/odometry/base_raw
 
 1. To launch the simulation environment, cd into NW_assignment_ws and run:
-roslaunch uol_cmp9767m_base thorvald-sim.launch fake_localisation:=true
+roslaunch uol_cmp9767m_base thorvald-sim.launch obstacles:=false second_robot:=false fake_localisation:=true
+
 Afterwards, Gazebo will load environment model and robot model
 
 2. To launch the perception and controller node, run:
-python src/assignment/scripts/run.py 
+python src/assignment/run.py 
 This node subscribes depth image from topic '/thorvald_001/kinect2_sensor/sd/image_depth_rect' and RGB image from topic '/thorvald_001/kinect2_camera/hd/image_color_rect' synchronously.
+
+Visualize with: rqt_image_view
+
 
 3. Perception strategies:
 I initially intended to use depth information to further distinguish different types of plants, but later it's found that those plants in this simulator are plain picture. Therefore depth image is not dealt,
